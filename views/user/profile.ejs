@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/profile.css">
+
+<div class="profile-container">
+    <h1>Profile</h1>
+
+    <img 
+        src="<%= profileUser.profileImage ? profileUser.profileImage : '/uploads/profiles/default.png' %>?v=<%= profileUser.updatedAt.getTime() %>" 
+        alt="Profile Picture"
+        class="profile-img"
+    />
+
+    <form action="/profile/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="profileImage" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <h2><%= profileUser.username %></h2>
+    <p><%= profileUser.bio %></p>
+
+    <p>
+        Followers: <%= profileUser.followers.length %> |
+        Following: <%= profileUser.following.length %>
+    </p>
+
+    <% if (currentUser && profileUser._id.toString() !== currentUser._id.toString()) { %>
+
+        <% if (profileUser.followers.includes(currentUser._id)) { %>
+            <form action="/profile/<%= profileUser._id %>/unfollow" method="POST">
+                <button type="submit">Unfollow</button>
+            </form>
+        <% } else { %>
+            <form action="/profile/<%= profileUser._id %>/follow" method="POST">
+                <button type="submit">Follow</button>
+            </form>
+        <% } %>
+
+    <% } %>
+</div>

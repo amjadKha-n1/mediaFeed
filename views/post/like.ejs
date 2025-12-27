@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/comment-like.css">
+
+<div class="likes-section">
+    <% if (!post || post.likes.length === 0) { %>
+        <p id="no-likes">No likes yet.</p>    
+    <% } else { %>
+        <h2>Likes</h2>
+        <ol class="post-list">
+            <li class="list-item">
+                <% for (const user of post.likes) { %>
+                    <p>
+                        <strong>@<%= user.username %></strong>
+                    </p>
+                <% } %>
+            </li>
+        </ol>
+    <% } %>
+</div>

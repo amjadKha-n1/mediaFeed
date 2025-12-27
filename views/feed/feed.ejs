@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/css/feed.css" />
+
+
+<div class="feed-page">
+    <div class="feed-container">
+        <h1>Media Feed</h1>
+        <% if (!posts || posts.length === 0) { %>
+            <div class="no-posts">
+                <p>No posts found!</p>
+                <a href="/create-post">Create new post</a>
+            </div>
+        <% } else { %>
+            <div class="has-posts">
+                <ol class="post-list">
+                    <% for (const post of posts) { %>
+                        <li class="list-item">
+                            <div class="post-time" style="color: rgb(153, 126, 126);">
+                                <div class="profile-container-1">
+                                    <img 
+                                        src="<%= post.user.profileImage ? post.user.profileImage : '/uploads/profiles/default.png' %>?v=<%= post.user.updatedAt.getTime() %>" 
+                                        alt="Profile Picture"
+                                        class="profile-img"
+                                    />
+                                    <a href="/profile/<%= post.user.username %>">
+                                        @<strong><%= post.user.username %></strong>
+                                    </a>
+                                    &nbsp;&bull;&nbsp;
+                                    <%= post.timeAgo %>
+                                </div>
+                            </div>
+                            
+                            <p class="post-content"><%= post.content %></p>
+                            <p class="post-actions">
+                                <% 
+                                const liked = post.likes.map(id => id.toString()).includes(user.id);
+                                %>
+
+                                <span class="like-container" data-post-id="<%= post._id %>">
+                                    <a href="#" class="like-btn">
+                                        <span class="heart">
+                                            <%= post.likes.map(id => id.toString()).includes(user.id) ? "❤️" : "🤍" %>
+                                        </span>
+                                    </a>
+                                
+                                    <a href="/post/<%= post._id %>/likes" class="like-count-link">
+                                        <span class="like-count"><%= post.likes.length %></span>
+                                    </a>
+                                </span>
+                                
+                                &nbsp;&bull;&nbsp;
+                                <a href="/post/<%= post._id %>/comment">
+                                    💬 <%= post.commentCount %> Comments
+                                </a>
+                            </p>
+                        </li>
+                    <% } %>
+                </ol>
+            </div>
+        <% } %>
+    </div>
+
+    <div class="profile-container-2">
+        <img 
+            src="<%= user.profileImage ? user.profileImage : '/uploads/profiles/default.png' %>?v=<%= user.updatedAt.getTime() %>" 
+            alt="Profile Picture"
+            class="profile-img"
+        />
+        <a href="/profile"><h2><%= user.username %></h2></a>
+    </div>
+</div>
+

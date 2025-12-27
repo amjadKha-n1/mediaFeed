@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/comment-like.css">
+<div class="comments-section">
+    <h1>Media Feed</h1>
+    <ol class="post-list">
+        <li class="list-item">
+            <% if (post.comments && post.comments.length > 0) { %>
+                <p class="post-content"><%= post.content %></p>
+                <% for (const comment of post.comments) { %>
+                    <p>
+                        <strong>@<%= comment.user.username %></strong>
+                        <span style="color: rgb(65, 63, 63);"><%= comment.text %></span>
+                    </p>
+                <% } %>
+            <% } else { %>
+                <p class="post-content"><%= post.content %></p>
+                <p>No comments yet.</p>
+            <% } %>
+        </li>
+    </ol>
+</div>
+<form action="/posts/<%= post._id %>/comment" method="POST" class="comment-form">
+    <input type="text" class="comment-field" name="text" placeholder="Add a comment..." required />
+    <button type="submit">Comment</button>
+</form>

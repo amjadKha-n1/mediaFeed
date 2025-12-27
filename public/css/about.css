@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2c3e50;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #efebeb;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1e272e;
+}
+
+.intro-text {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #dcdde1;
+    margin: 30px 0;
+}
+
+.about-section {
+    margin-bottom: 25px;
+}
+
+.about-section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #273c75;
+}
+
+.about-section p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.about-section ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.about-section li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #7f8fa6;
+}

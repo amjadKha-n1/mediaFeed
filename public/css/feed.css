@@ -1,0 +1,112 @@
+body {
+    background-color: rgb(238, 233, 233);
+    font-family: italic;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+h1 {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    
+}
+.feed-page {
+    display: grid;
+    grid-template-columns: 6fr 1.8fr;
+    gap: 5rem;
+}
+.no-posts {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+.has-posts{
+    max-width: 1350px;
+    padding: 1rem;
+}
+.post-content {
+    text-align: center;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-left: 7rem;
+}
+
+.list-item {
+    border-radius: 0.7rem;
+    list-style: none;
+    background-color: rgba(232, 208, 208, 0.427);
+    box-shadow: 10px 10px 10px rgb(149, 176, 242);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    text-align: left;
+    font-size: 1.5rem;
+
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+a:hover {
+    text-decoration: none;
+}
+.profile-container-1 {
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-container-1 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+    border: 3px solid #655f5f;
+    background-color: #fff;
+}
+.suggested-users {
+    width: 100%;
+    padding-right: 2rem;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+}
+
+.profile-container-2 {
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+.profile-container-2 h2 {
+    margin-top: 2.8rem;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+.profile-container-2 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+    border: 3px solid #655f5f;
+    margin-bottom: 20px;
+    background-color: #fff;
+}

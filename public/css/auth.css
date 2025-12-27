@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(73, 71, 71);
+    color: white;
+    position: relative;
+    height: 100%;
+    font-family: italic;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+    gap: 2rem;
+}
+form h1 {
+    font-size: 4rem;
+}
+
+form input {
+    background-color: rgb(107, 105, 105);
+    border: medium solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+form input::placeholder {
+    color: rgb(191, 188, 188);
+}
+
+form button {
+    background-color: rgb(207, 204, 204);
+    font-size: 2rem;
+    font-family: italic;
+    border-radius: 1rem;
+    padding: 0.8rem;
+}
+
+form button:hover {
+    background-color: rgb(186, 180, 180);
+    cursor: pointer;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+#link {
+    color: rgb(0, 179, 255);
+    text-decoration: none;
+}
+#link:hover {
+    cursor: pointer;
+}

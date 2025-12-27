@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <% if(!hideNavbar) { %>
+        <%- include('../partials/navbar') %>
+    <% } %>    
+    <main>
+        <%- body %>
+    </main>
+    <script src="/js/like.js"></script>
+    
+</body>
+</html>
