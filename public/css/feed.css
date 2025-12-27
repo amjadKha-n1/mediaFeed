@@ -13,7 +13,7 @@ h1 {
 }
 .feed-page {
     display: grid;
-    grid-template-columns: 6fr 1.8fr;
+    grid-template-columns: 6fr 1.4fr;
     gap: 5rem;
 }
 .no-posts {
